@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-11-24 14:33:26
  * @LastEditors: renlina
- * @LastEditTime: 2021-11-24 16:49:47
+ * @LastEditTime: 2021-12-27 15:39:08
  * @Description: 文字
 -->
 <template>
@@ -25,7 +25,7 @@ export default defineComponent({
                 let ctx = data.Ctx
                 ctx = canvas.value.getContext("2d")
                 let img = new Image()
-                img.src = 'https://static.rong360.com/upload/png/c7/51/c7517b1f6c35679d8cfa79c8c3035126.png'
+                img.src = ''
                 img.onload = (e)=>{
                     console.log(img.width,img.height,'0000')
                     ctx.drawImage(img,0,0)

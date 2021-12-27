@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-12-17 15:18:56
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-20 13:35:30
+ * @LastEditTime: 2021-12-27 15:39:15
  * @Description: 新的语义标签
 -->
 <template>
@@ -41,7 +41,7 @@
                 </datalist>
                 <div class="red">figure> 元素代表一段独立的内容.用于对元素进行组合。多用于图片与图片描述组合。</div>
                 <figure>
-                    <img src="https://static.rong360.com/upload/png/4b/a8/4ba8cbe148af6024c0af042f3be3b938.png" alt="">
+                    <img src="" alt="">
                     <figcaption>
                         <div>这是一个描述信息 </div>
                     </figcaption>

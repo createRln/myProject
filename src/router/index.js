@@ -2,17 +2,17 @@
  * @Author: renlina
  * @Date: 2021-08-16 19:10:18
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-27 20:32:53
+ * @LastEditTime: 2021-12-29 14:44:13
  * @Description: 
  */
 import { createRouter, createWebHistory } from 'vue-router'
   // canvas学习
   const routeCanvas = [
-    {
-        path: '/',
-        name: 'Home',
-        component: import(/* webpackChunkName: "about" */ '../views/test/test.vue')
-      },
+    // {
+    //     path: '/',
+    //     name: 'Home',
+    //     component: import(/* webpackChunkName: "about" */ '../views/test/test.vue')
+    //   },
     {
         path: '/next',
         name: 'Next',
@@ -133,11 +133,39 @@ import { createRouter, createWebHistory } from 'vue-router'
       component: () => import('../views/wechat/wechat01.vue')
     }
   ]
+
+  // pc端项目
+  const routePc = [
+    {
+      path: '/login',
+      name: 'login',
+      component: ()=> import('../views/testpc/login.vue')
+    },
+    {
+      path: '/',
+      name: 'main',
+      redirect: '/goods-index',
+      component: () => import('../views/testpc/testpc01.vue'),
+      children:[
+        {
+          path: '/goods-index',
+          name: 'index',
+          component: ()=> import('../views/testpc/Index/goodsIndex.vue')
+        },
+        {
+          path: '/goods-inde',
+          name: 'inde',
+          component: ()=> import('../views/testpc/Index/goodsIndex.vue')
+        },
+      ]
+    }
+  ]
   const routes=[
     ...routeCanvas,
     ...routeSewseman,
     ...routeJs,
     ...routeWs,
+    ...routePc,
   ]
 
   const router = createRouter({

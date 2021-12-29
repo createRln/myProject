@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-08-16 19:10:18
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-23 14:27:42
+ * @LastEditTime: 2021-12-27 20:32:53
  * @Description: 
  */
 import { createRouter, createWebHistory } from 'vue-router'
@@ -125,10 +125,19 @@ import { createRouter, createWebHistory } from 'vue-router'
       component: () => import('../views/js/js-1类.vue')
     }
   ]
+  // 在线聊天相关的知识点
+  const routeWs = [
+    {
+      path: '/wechat',
+      name: 'wechat',
+      component: () => import('../views/wechat/wechat01.vue')
+    }
+  ]
   const routes=[
     ...routeCanvas,
     ...routeSewseman,
     ...routeJs,
+    ...routeWs,
   ]
 
   const router = createRouter({

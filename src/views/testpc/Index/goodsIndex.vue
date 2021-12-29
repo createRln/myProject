@@ -2,20 +2,20 @@
  * @Author: renlina
  * @Date: 2021-12-29 13:38:47
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-29 17:38:10
+ * @LastEditTime: 2021-12-29 17:53:37
  * @Description: 
 -->
 <template>
     <div>
         <el-row class="search_title">
             <el-col :span="8">
-                <h2>选品库</h2>
+                <h2>选品库11</h2>
             </el-col>
             <el-col :span="8">
                 <div class="search_input">
                     <el-input class="input" v-model="searchValue"  clearable @input="searchValueInput" placeholder="请输入关键词" />
                     <el-icon :size="20" :color="'blue'">
-                        <search />
+                        <search ></search>
                     </el-icon>
                 </div>
             </el-col>

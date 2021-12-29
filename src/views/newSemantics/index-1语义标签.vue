@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-12-17 15:18:56
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-27 15:39:15
+ * @LastEditTime: 2021-12-29 17:58:29
  * @Description: 新的语义标签
 -->
 <template>
@@ -32,21 +32,21 @@
                     </template>
                 </div>
             </aside>
-            <div class="red">article>是一个特殊的section标签，它比section具有更明确的语义，它代表一个独立的、完整的相关内容块，可独立于页面其它内容使用。例如一篇完整的论坛帖子，一篇博客文章，一个用户评论等等。一般来说，article会有标题部分（通常包含在header内），有时也会包含footer。article可以嵌套，内层的article对外层的article标签有隶属关系。例如，一篇博客的文章，可以用article显示，然后一些评论可以以article的形式嵌入其中。 正文信息</div>
+            <div class="red">article是一个特殊的section标签，它比section具有更明确的语义，它代表一个独立的、完整的相关内容块，可独立于页面其它内容使用。例如一篇完整的论坛帖子，一篇博客文章，一个用户评论等等。一般来说，article会有标题部分（通常包含在header内），有时也会包含footer。article可以嵌套，内层的article对外层的article标签有隶属关系。例如，一篇博客的文章，可以用article显示，然后一些评论可以以article的形式嵌入其中。 正文信息</div>
             <article>
                 <div class="red">实现提示语,datalist选项列表标签，id绑定到input的list上去，会出现提示语。</div>
-                <input class="input" type="text" list="list" @blur="inputBlur">
+                <input class="input" type="text" list="list" @blur="inputBlur" />
                 <datalist id="list" class="input_tishi">
                     <option v-for="(item,index) in inputOPtions" :key="index" :value="item"></option>
                 </datalist>
-                <div class="red">figure> 元素代表一段独立的内容.用于对元素进行组合。多用于图片与图片描述组合。</div>
+                <div class="red">figure 元素代表一段独立的内容.用于对元素进行组合。多用于图片与图片描述组合。</div>
                 <figure>
-                    <img src="" alt="">
+                    <img src="" alt="" />
                     <figcaption>
                         <div>这是一个描述信息 </div>
                     </figcaption>
                 </figure>
-                <div class="red">details> 标签：用于描述文档或文档某个部分的细节。<summary> 标签：包含<details> 标签的标题。</div>
+                <div class="red">details> 标签：用于描述文档或文档某个部分的细节。summary> 标签：包含details> 标签的标题。</div>
                 <details>
                     <summary>
                         点击展示隐藏

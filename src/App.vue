@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-08-16 19:06:22
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-17 15:32:03
+ * @LastEditTime: 2022-02-08 14:16:09
  * @Description: 
 -->
 <template>
@@ -14,12 +14,9 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>

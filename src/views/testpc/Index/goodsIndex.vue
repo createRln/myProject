@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-12-29 13:38:47
  * @LastEditors: renlina
- * @LastEditTime: 2021-12-29 17:53:37
+ * @LastEditTime: 2022-02-08 14:40:15
  * @Description: 
 -->
 <template>
@@ -25,8 +25,9 @@
 </template>
 
 <script>
-import {defineComponent,ref,toRefs,reactive} from 'vue'
+import {defineComponent,ref,toRefs,reactive,onMounted} from 'vue'
 import {Search } from '@element-plus/icons-vue'
+// import { TestApi } from '@axios/api'
 export default defineComponent({
     components:{
         Search
@@ -37,6 +38,11 @@ export default defineComponent({
             value = value.trim()
             searchValue.value = value
         }
+        onMounted(()=>{
+            console.log('1111111')
+            // let res = TestApi({'参数':'canshu'})
+            // console.log(res,'res===')
+        })
         return{
             searchValue,
             searchValueInput

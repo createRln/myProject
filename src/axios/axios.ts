@@ -2,12 +2,10 @@
  * @Author: renlina
  * @Date: 2022-02-08 10:39:09
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-08 11:06:57
+ * @LastEditTime: 2022-02-08 14:01:50
  * @Description: 
  */
 import axios from 'axios'
-import { reject, resolve } from 'core-js/fn/promise'
-
 let nAxios = axios.create({
     withCredentials: true,
     headers: {

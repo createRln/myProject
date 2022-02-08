@@ -2,12 +2,12 @@
  * @Author: renlina
  * @Date: 2021-08-16 19:06:22
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-08 14:16:09
+ * @LastEditTime: 2022-02-08 17:09:42
  * @Description: 
 -->
 <template>
 <div id="app" style="margin: 0px;">
-    <router-view  :key="$route.meta.fullPath"/>
+    <router-view  :key="$route.name"/>
 </div>
   
 

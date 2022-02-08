@@ -1,19 +1,7 @@
-<!--
- * @Author: renlina
- * @Date: 2021-12-27 10:27:14
- * @LastEditors: renlina
- * @LastEditTime: 2021-12-27 10:51:57
- * @Description: 
--->
-# myProject
-h5项目。
-## 项目描述
-这是一个用于巩固和积累的代码库。使用的是vue3来开发的。
-### 初始化项目
-yarn install
-### 运行项目
-yarn dev
-### 打包项目
-yarn build
+# Vue 3 + Vite
 
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
+## Recommended IDE Setup
+
+- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)

@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2022-02-08 15:30:02
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-08 18:34:35
+ * @LastEditTime: 2022-02-09 17:07:05
  * @Description: 
  */
 import { defineConfig } from 'vite'
@@ -22,7 +22,9 @@ export default defineConfig({
       "@axios":Resolve("src/axios"),
       "@views":Resolve("src/views"),
       "@styles":Resolve("src/styles"),
+      "@components":Resolve("src/components"),
     }
+    
   },
   css: {
     postcss: {
@@ -42,7 +44,7 @@ export default defineConfig({
     host:'0.0.0.0',
     proxy:{
       '/dmz':{
-        target:'aaa.ss',
+        target:'aaa.cc',
         changeOrigin:true,
         secure:true
       }

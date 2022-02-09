@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-12-29 13:38:47
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-08 16:15:26
+ * @LastEditTime: 2022-02-09 17:04:45
  * @Description: 
 -->
 <template>
@@ -26,15 +26,34 @@
 </template>
 
 <script>
-import {defineComponent,ref,toRefs,reactive,onMounted} from 'vue'
+import {defineComponent,ref,toRefs,reactive,onMounted,getCurrentInstance} from 'vue'
 import {Search } from '@element-plus/icons-vue'
 import { TestApi } from '@axios/api'
+import LOADING from '@components/Loading/index'
+import TOAST from '@components/Toast/index'
+// import LOADING from '@components/Loading/loading.js'
 export default defineComponent({
     components:{
         Search
     },
+    methods:{
+        
+    },
     setup(){
-        const searchValue = ref('')
+        LOADING.show()
+        setTimeout(()=>{
+            LOADING.hide()
+        },3000)
+        // TOAST({
+        //     message:'传过来的',
+        //     isSucc:false,
+        //     duration:3000,
+        //     onClose:function(){
+        //         console.log('关闭了关闭了')
+        //     }
+        // })
+        // instance.proxy
+        let searchValue = ref(false)
         const searchValueInput = (value)=>{
             value = value.trim()
             searchValue.value = value

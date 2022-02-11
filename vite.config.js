@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2022-02-08 15:30:02
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-11 14:59:37
+ * @LastEditTime: 2022-02-11 15:13:58
  * @Description: 
  */
 import { defineConfig } from 'vite'
@@ -51,6 +51,16 @@ export default defineConfig({
     }
   },
   build:{
-    cssCodeSplit:false
+    cssCodeSplit:false,
+    chunkSizeWarningLimit:1500,
+    rollupOptions:{
+      output:{
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+              return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        }
+      }
+    }
   }
 })

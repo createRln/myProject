@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2021-12-29 13:38:47
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-09 17:04:45
+ * @LastEditTime: 2022-02-11 14:17:37
  * @Description: 
 -->
 <template>
@@ -40,10 +40,9 @@ export default defineComponent({
         
     },
     setup(){
-        LOADING.show()
-        setTimeout(()=>{
-            LOADING.hide()
-        },3000)
+        // setTimeout(()=>{
+        //     LOADING.hide()
+        // },3000)
         // TOAST({
         //     message:'传过来的',
         //     isSucc:false,
@@ -59,7 +58,9 @@ export default defineComponent({
             searchValue.value = value
         }
         onMounted(async()=>{
+            LOADING.show()
             let res = await TestApi({'参数':'canshu'})
+            LOADING.hide()
             console.log(res,'res===')
         })
         return{

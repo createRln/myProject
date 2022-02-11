@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2022-02-09 15:35:20
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-09 16:52:09
+ * @LastEditTime: 2022-02-11 14:11:46
  * @Description: 
 -->
 <template>
@@ -44,7 +44,9 @@ export default {
         const close = ()=>{
             clearTimeout(timer)
             timer = null
-            props.onClose()
+            if(props.onClose){
+                props.onClose()
+            }
         }
         onMounted(()=>{
             startTimer()

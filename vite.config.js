@@ -2,13 +2,13 @@
  * @Author: renlina
  * @Date: 2022-02-08 15:30:02
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-09 17:07:05
+ * @LastEditTime: 2022-02-11 14:59:37
  * @Description: 
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'; // 主要用于alias文件路径别名
-import postCssPxToRem from "postcss-pxtorem";
+import postCssPxToRem from "postcss-pxtorem"; //注意postCssPxToRem在vue2中是直接require的形式，但是这种方式在vue3中不被支持，需要改成import的形式
 
 const Resolve = (dir)=>{
   return resolve(__dirname,dir)
@@ -44,7 +44,7 @@ export default defineConfig({
     host:'0.0.0.0',
     proxy:{
       '/dmz':{
-        target:'aaa.cc',
+        target:'aaaa',
         changeOrigin:true,
         secure:true
       }

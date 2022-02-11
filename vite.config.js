@@ -2,7 +2,7 @@
  * @Author: renlina
  * @Date: 2022-02-08 15:30:02
  * @LastEditors: renlina
- * @LastEditTime: 2022-02-11 15:13:58
+ * @LastEditTime: 2022-02-11 15:18:19
  * @Description: 
  */
 import { defineConfig } from 'vite'
@@ -52,6 +52,7 @@ export default defineConfig({
   },
   build:{
     cssCodeSplit:false,
+    //开始 解决Some chunks are larger than 500 KiB after minification    https://blog.csdn.net/Dawnchen1/article/details/118994062
     chunkSizeWarningLimit:1500,
     rollupOptions:{
       output:{
@@ -62,5 +63,6 @@ export default defineConfig({
         }
       }
     }
+    //开始 解决Some chunks are larger than 500 KiB after minification
   }
 })
